@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Tiles Sam.meta
 guid: 28a23f7d346ea0149a149a0fac75ef60
+=======
+guid: afa43970c5627134399246aebb560d26
+>>>>>>> master:Assets/Animaciones.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
