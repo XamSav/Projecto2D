@@ -164,6 +164,21 @@ TextureImporter:
   - first:
       213: 1752346690022490754
     second: grass_tileset_16x16_53
+  - first:
+      213: 1709314636392440411
+    second: grass_tileset_16x16_0
+  - first:
+      213: 6711256376590125799
+    second: grass_tileset_16x16_1
+  - first:
+      213: -4622627699276466865
+    second: grass_tileset_16x16_2
+  - first:
+      213: 371616371107224997
+    second: grass_tileset_16x16_3
+  - first:
+      213: -3597905224790900057
+    second: grass_tileset_16x16_4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
