@@ -7,7 +7,7 @@ public class Move : MonoBehaviour
     [SerializeField]
     private Vector2 _dir;
     [SerializeField]
-    private float _velM;
+    private float _velM = 25;
 
     private Rigidbody2D _rb;
 
