@@ -10,7 +10,7 @@
 /[Ll]ogs/
 /[Mm]emoryCaptures/
 
-# Never ignore Asset meta data
+# Ignore Asset meta data
 *.meta
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
