@@ -1,0 +1,871 @@
+fileFormatVersion: 2
+guid: 00e283efa6c373c489eb8cc0008f3858
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2800743867407550232
+    second: Enemiy_Stella_0
+  - first:
+      213: 7021792146037452074
+    second: Enemiy_Stella_1
+  - first:
+      213: -7208500247975598939
+    second: Enemiy_Stella_2
+  - first:
+      213: -262435081705133626
+    second: Enemiy_Stella_3
+  - first:
+      213: -8945279467169925925
+    second: Enemiy_Stella_4
+  - first:
+      213: 1977734181538236202
+    second: Enemiy_Stella_5
+  - first:
+      213: -4887984940591522993
+    second: Enemiy_Stella_6
+  - first:
+      213: 791015978840582769
+    second: Enemiy_Stella_7
+  - first:
+      213: 7845521466592347144
+    second: Enemiy_Stella_8
+  - first:
+      213: 8858637755458283237
+    second: Enemiy_Stella_9
+  - first:
+      213: 2709902730918084838
+    second: Enemiy_Stella_10
+  - first:
+      213: 5166926138729875480
+    second: Enemiy_Stella_11
+  - first:
+      213: -1241137209750759184
+    second: Enemiy_Stella_12
+  - first:
+      213: -823990676498995334
+    second: Enemiy_Stella_13
+  - first:
+      213: 1976981421365582452
+    second: Enemiy_Stella_14
+  - first:
+      213: -1711306245874817492
+    second: Enemiy_Stella_15
+  - first:
+      213: 8164411010132550055
+    second: Enemiy_Stella_16
+  - first:
+      213: 7996158729467186613
+    second: Enemiy_Stella_17
+  - first:
+      213: 1352251677342458492
+    second: Enemiy_Stella_18
+  - first:
+      213: 3392911377596654545
+    second: Enemiy_Stella_19
+  - first:
+      213: -470740239014426400
+    second: Enemiy_Stella_20
+  - first:
+      213: 3387109608325290611
+    second: Enemiy_Stella_21
+  - first:
+      213: 2673058681853070568
+    second: Enemiy_Stella_22
+  - first:
+      213: 5201078697807249258
+    second: Enemiy_Stella_23
+  - first:
+      213: -3945984529026516636
+    second: Enemiy_Stella_24
+  - first:
+      213: -400982058302140201
+    second: Enemiy_Stella_25
+  - first:
+      213: -8604563496916238412
+    second: Enemiy_Stella_26
+  - first:
+      213: -9018059519885149061
+    second: Enemiy_Stella_27
+  - first:
+      213: -6571255010969471443
+    second: Enemiy_Stella_28
+  - first:
+      213: 1167326108276217543
+    second: Enemiy_Stella_29
+  - first:
+      213: 8568179524919770884
+    second: Enemiy_Stella_30
+  - first:
+      213: 9010871580209177567
+    second: Enemiy_Stella_31
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemiy_Stella_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 452
+        width: 34
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8174eab55bd3ed620800000000000000
+      internalID: 2800743867407550232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 450
+        width: 34
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2da037f0ca627160800000000000000
+      internalID: 7021792146037452074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_2
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 452
+        width: 34
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a4691c773346fb90800000000000000
+      internalID: -7208500247975598939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_3
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 450
+        width: 34
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c96d520fa4ab5cf0800000000000000
+      internalID: -262435081705133626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_4
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 387
+        width: 32
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd4bdbef7bbfbd380800000000000000
+      internalID: -8945279467169925925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_5
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 386
+        width: 32
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a270cb672c2527b10800000000000000
+      internalID: 1977734181538236202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_6
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 387
+        width: 32
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4b559c18936a2cb0800000000000000
+      internalID: -4887984940591522993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_7
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 387
+        width: 32
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17a637e77d04afa00800000000000000
+      internalID: 791015978840582769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_8
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 323
+        width: 31
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80440fdd434e0ec60800000000000000
+      internalID: 7845521466592347144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_9
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 322
+        width: 31
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e664ff7a1430fa70800000000000000
+      internalID: 8858637755458283237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_10
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 323
+        width: 31
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e0cb341d228b9520800000000000000
+      internalID: 2709902730918084838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_11
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 322
+        width: 31
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 818cca792fb94b740800000000000000
+      internalID: 5166926138729875480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_12
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 260
+        width: 34
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f85947984896cee0800000000000000
+      internalID: -1241137209750759184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_13
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 259
+        width: 34
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a772b0d68d89094f0800000000000000
+      internalID: -823990676498995334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_14
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 260
+        width: 34
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47ada04d026af6b10800000000000000
+      internalID: 1976981421365582452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_15
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 259
+        width: 34
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2669b849083048e0800000000000000
+      internalID: -1711306245874817492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_16
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 194
+        width: 36
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a12d3b8e80dd4170800000000000000
+      internalID: 8164411010132550055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_17
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 193
+        width: 35
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bdc78dbfff08fe60800000000000000
+      internalID: 7996158729467186613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_18
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 194
+        width: 36
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c726cea6cb924c210800000000000000
+      internalID: 1352251677342458492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_19
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 194
+        width: 37
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d3a708ebea061f20800000000000000
+      internalID: 3392911377596654545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_20
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 130
+        width: 36
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e800182f389779f0800000000000000
+      internalID: -470740239014426400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_21
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 130
+        width: 36
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37a9a8b3e3e610f20800000000000000
+      internalID: 3387109608325290611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_22
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 130
+        width: 36
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ec40ab65bc981520800000000000000
+      internalID: 2673058681853070568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_23
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 129
+        width: 36
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ff6a7e481fd2840800000000000000
+      internalID: 5201078697807249258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_24
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 66
+        width: 36
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 469ff224afb0d39c0800000000000000
+      internalID: -3945984529026516636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_25
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 65
+        width: 36
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d0989541fc6f6af0800000000000000
+      internalID: -400982058302140201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_26
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 66
+        width: 36
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bfb307a613769880800000000000000
+      internalID: -8604563496916238412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_27
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 67
+        width: 37
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7c7ae975aa69d280800000000000000
+      internalID: -9018059519885149061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_28
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 2
+        width: 36
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d26b8ae22663ec4a0800000000000000
+      internalID: -6571255010969471443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_29
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1
+        width: 36
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c6d7d429ec233010800000000000000
+      internalID: 1167326108276217543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_30
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 2
+        width: 36
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40f3e9ab1e948e670800000000000000
+      internalID: 8568179524919770884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemiy_Stella_31
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 3
+        width: 38
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd3e707e5fb0d0d70800000000000000
+      internalID: 9010871580209177567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

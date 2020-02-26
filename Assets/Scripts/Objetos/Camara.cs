@@ -9,5 +9,7 @@ public class Camara : MonoBehaviour
     private void FixedUpdate()
     {
         transform.position = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z);
+        DontDestroyOnLoad(this.gameObject);
     }
+    
 }
