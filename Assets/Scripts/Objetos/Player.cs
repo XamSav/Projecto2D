@@ -9,12 +9,13 @@ public class Player : MonoBehaviour
     private Move _move;
     private Animator _animator;
     void Awake()
-    {
+    {        
         _move = GetComponent<Move>();
     }
     private void Start()
     {
         _animator=GetComponent<Animator>();
+        DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame
@@ -24,7 +25,7 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
         {
             _animator.SetInteger("State",6);
-            _move.move(new Vector2(-1, 1));
+            _move.move(new Vector2(-1, 1).normalized);
         }
         else
         {
@@ -70,14 +71,14 @@ public class Player : MonoBehaviour
                             _animator.SetInteger("State", 7);
                             _move.move(Vector2.left);
                         }
-                        if (!Input.anyKey){
+                      /*  if (!Input.anyKey){
                             _animator.SetInteger("State", 0);
-                        }
+                        }*/
                     }
                 }
             }
 
         }
-        DontDestroyOnLoad(this.gameObject);
+       
     }
 }
