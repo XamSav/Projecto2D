@@ -6,6 +6,13 @@ public class Camara : MonoBehaviour
 {
     
     private GameObject player;
+    [SerializeField]
+    private bool bounds;
+
+    [SerializeField]
+    private Vector3 minCameraPos;
+    [SerializeField]
+    private Vector3 MaxCameraPos;
 
     private void OnEnable()
     {
@@ -15,7 +22,13 @@ public class Camara : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.position = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z);
+        
+       transform.position = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z);
+
+        if (bounds)
+        {
+            transform.position = new Vector3(Mathf.Clamp(transform.position.x, minCameraPos.x, MaxCameraPos.x), Mathf.Clamp(transform.position.y, minCameraPos.y, MaxCameraPos.y), Mathf.Clamp(transform.position.z, minCameraPos.z, MaxCameraPos.z));
+        }
     }
     
 }

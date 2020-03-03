@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
             if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
             {
                 _animator.SetInteger("State",4);
-                _move.move(new Vector2(1, 1));
+                _move.move(new Vector2(1, 1).normalized);
             }
             else
             {
