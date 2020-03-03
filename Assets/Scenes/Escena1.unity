@@ -621,7 +621,6 @@ GameObject:
   - component: {fileID: 387359755}
   - component: {fileID: 387359754}
   - component: {fileID: 387359753}
-  - component: {fileID: 387359752}
   m_Layer: 5
   m_Name: Pause
   m_TagString: Untagged
@@ -649,20 +648,6 @@ RectTransform:
   m_AnchoredPosition: {x: -47, y: 24}
   m_SizeDelta: {x: 76.57, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &387359752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 387359750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1dfe653a06dac54cab5f77b258caed7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volumen: {fileID: 0}
-  subtitulos: {fileID: 0}
 --- !u!114 &387359753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -728,7 +713,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 387359752}
+      - m_Target: {fileID: 1218010367}
         m_MethodName: Pause
         m_Mode: 1
         m_Arguments:
@@ -979,7 +964,6 @@ GameObject:
   - component: {fileID: 614281543}
   - component: {fileID: 614281542}
   - component: {fileID: 614281541}
-  - component: {fileID: 614281540}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -1007,20 +991,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -100.4}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &614281540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 614281538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1dfe653a06dac54cab5f77b258caed7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volumen: {fileID: 0}
-  subtitulos: {fileID: 0}
 --- !u!114 &614281541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1064,7 +1034,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 614281540}
+      - m_Target: {fileID: 1218010367}
         m_MethodName: Exit
         m_Mode: 1
         m_Arguments:
@@ -6837,6 +6807,7 @@ GameObject:
   - component: {fileID: 1218010365}
   - component: {fileID: 1218010364}
   - component: {fileID: 1218010363}
+  - component: {fileID: 1218010367}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -6925,6 +6896,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1218010367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218010362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1dfe653a06dac54cab5f77b258caed7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumen: {fileID: 1838912553}
+  subtitulos: {fileID: 0}
 --- !u!1 &1250673264
 GameObject:
   m_ObjectHideFlags: 0
@@ -43542,7 +43527,6 @@ GameObject:
   - component: {fileID: 1847229353}
   - component: {fileID: 1847229352}
   - component: {fileID: 1847229351}
-  - component: {fileID: 1847229350}
   m_Layer: 5
   m_Name: Continue
   m_TagString: Untagged
@@ -43570,20 +43554,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1847229350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1847229348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1dfe653a06dac54cab5f77b258caed7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volumen: {fileID: 0}
-  subtitulos: {fileID: 0}
 --- !u!114 &1847229351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43627,7 +43597,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1847229350}
+      - m_Target: {fileID: 1218010367}
         m_MethodName: Continue
         m_Mode: 1
         m_Arguments:
