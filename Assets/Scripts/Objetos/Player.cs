@@ -41,14 +41,14 @@ public class Player : MonoBehaviour
                 if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
                 {
                     _animator.SetInteger("State",8);
-                    _move.move(new Vector2(-1, -1));
+                    _move.move(new Vector2(-1, -1).normalized);
                 }
                 else {
                     //Down-Right
                     if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
                     {
                         _animator.SetInteger("State",2);
-                        _move.move(new Vector2(1, -1));
+                        _move.move(new Vector2(1, -1).normalized);
                     }
                     else {
                         if (Input.GetKey(KeyCode.W))
