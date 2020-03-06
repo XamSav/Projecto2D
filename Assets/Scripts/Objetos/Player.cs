@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Player : MonoBehaviour
 {
     //private int hits = 7;
 
     private Move _move;
     private Animator _animator;
+    [SerializeField]
+    private GameObject _axe;
+
+
     void Awake()
     {        
         _move = GetComponent<Move>();
@@ -76,6 +79,12 @@ public class Player : MonoBehaviour
                         }*/
                     }
                 }
+            }
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                GameObject hijo = Instantiate(_axe) as GameObject;
+                hijo.transform.parent = this.transform;
+                hijo.transform.position = this.transform.position;
             }
 
         }
