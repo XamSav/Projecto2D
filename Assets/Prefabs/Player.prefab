@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _axe: {fileID: 1613029957962592947, guid: 7fc62398d1424a344b67f56ef4eba351, type: 3}
-  _axePoint: {fileID: 5389847483565568428}
+  _speed: 10
 --- !u!114 &5838673018605782582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,4 +201,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dir: {x: 0, y: 0}
-  _velM: 25
+  _velM: 10

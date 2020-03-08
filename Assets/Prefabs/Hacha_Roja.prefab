@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5593722050601746044}
   - component: {fileID: 562290524992388537}
   - component: {fileID: 3475437817876502609}
+  - component: {fileID: 1816361207366934220}
   m_Layer: 0
   m_Name: Hacha_Roja
   m_TagString: Untagged
@@ -129,3 +130,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1816361207366934220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613029957962592947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f9ac4e59b9363746a4a417d3c82c9e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectDestroy: {fileID: 1613029957962592947}
