@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     private Move _move;
     [SerializeField]
     private bool _aggro;
+    private Animator _animator;
     /*private Transform player;
     private float distance;
     private float howclose;*/
@@ -19,8 +20,9 @@ public class Enemy : MonoBehaviour
     {
         //player = GameObject.FindGameObjectWithTag("Player");
         _move = GetComponent<Move>();
+        _animator = GetComponent<Animator>();
         //seconds = 3;
-        randomdir = Random.Range(0, 4);
+        randomdir = Random.Range(0, 8);
         seconds = 0;
         wait = 3;
         //howclose = 8;
@@ -41,24 +43,48 @@ public class Enemy : MonoBehaviour
 
             if (seconds >= wait)
             {
+                _animator.SetInteger("State", 1);
                 switch (randomdir)
                 {
                     case 0:
                         _move.move(new Vector2(0, 1));
+                        //_animator.SetInteger("State", 1);
                         break;
                     case 1:
                         _move.move(new Vector2(0, -1));
+                        //_animator.SetInteger("State", 1);
                         break;
                     case 2:
                         _move.move(new Vector2(1, 0));
+                       // _animator.SetInteger("State", 1);
                         break;
                     case 3:
                         _move.move(new Vector2(-1, 0));
+                       // _animator.SetInteger("State", 1);
                         break;
+                    case 4:
+                        _move.move(new Vector2(-1, -1));
+                        //_animator.SetInteger("State", 1);
+                        break;
+                    case 5:
+                        _move.move(new Vector2(-1, 1));
+                       // _animator.SetInteger("State", 1);
+                        break;
+                    case 6:
+                        _move.move(new Vector2(1, 1));
+                       // _animator.SetInteger("State", 1);
+                        break;
+                    case 7:
+                        _move.move(new Vector2(1, -1));
+                       // _animator.SetInteger("State", 1);
+                        break;
+
+
                 }
+                _animator.SetInteger("State", 0);
                 seconds = 0;
                 randomdir = Random.Range(0, 4);
-            }
+            }           
         }
         /*else
         {
