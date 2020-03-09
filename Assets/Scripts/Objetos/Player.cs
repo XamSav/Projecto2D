@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
             _animator.SetFloat("Horizontal", _movement.x);
             _animator.SetFloat("Vertical", _movement.y);
             _animator.SetFloat("Magnitude", _movement.magnitude);
-            _move.move(_movement.normalized);
+            _move.move(_movement);
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
