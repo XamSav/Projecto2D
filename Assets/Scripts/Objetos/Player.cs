@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     private float secondsToCount = 1;
     void Awake()
     {
+        controller = PlayerPrefs.GetInt("Controller");
         _move = GetComponent<Move>();
     }
     private void Start()
@@ -21,12 +22,6 @@ public class Player : MonoBehaviour
         _animator = GetComponent<Animator>();
         DontDestroyOnLoad(this.gameObject);
     }
-
-    public void HandleInputData(int val)
-    {
-            controller = val;
-    }
-
     void Update()
     {
         if (controller == 0)
@@ -38,7 +33,7 @@ public class Player : MonoBehaviour
             _animator.SetFloat("Magnitude", _movement.magnitude);
             _move.move(_movement.normalized);
         }
-        else
+        else if(controller == 1)
         {
             Debug.Log("Hey!");
             Vector3 _movement = new Vector3(Input.GetAxis("HorizontalS"), Input.GetAxis("VerticalS"), 0.0f);

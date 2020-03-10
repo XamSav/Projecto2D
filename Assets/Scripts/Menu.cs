@@ -8,13 +8,16 @@ public class Menu : MonoBehaviour
     
     [SerializeField]
     private Slider volumen;
-    private bool _controlleroption = true;
+    [SerializeField]
+    private Dropdown Controller;
     private void Awake()
     {
         volumen.value = PlayerPrefs.GetFloat("Volumen");
+        Controller.value = PlayerPrefs.GetInt("Controller");
     }
     public void SaveOptions()
     {
+        PlayerPrefs.SetInt("Controller", Controller.value);
         PlayerPrefs.SetFloat("Volumen", volumen.value);
         PlayerPrefs.Save();
     }
@@ -29,23 +32,5 @@ public class Menu : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
-    }
-    public void HandleInputData(int val)
-    {
-        //Mando
-        if (val == 1)
-        {
-            _controlleroption = true;
-            Debug.Log(_controlleroption);
-            
-
-        }
-        //PC
-        if (val == 0)
-        {
-            _controlleroption = false;
-            Debug.Log(_controlleroption);
-            
-        }
     }
 }
