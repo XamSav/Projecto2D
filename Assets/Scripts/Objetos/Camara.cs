@@ -7,7 +7,7 @@ public class Camara : MonoBehaviour
     
     private GameObject player;
     [SerializeField]
-    private bool bounds;
+    private bool bounds = true;
 
     [SerializeField]
     private Vector3 minCameraPos;

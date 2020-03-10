@@ -4,7 +4,6 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     //private int hits = 7;
-    public Menu menu;
     private Move _move;
     private Animator _animator;
     [SerializeField]
@@ -24,6 +23,8 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
+        controller = PlayerPrefs.GetInt("Controller");
+
         if (controller == 0)
         {
             Debug.Log("Hey!");
@@ -35,7 +36,7 @@ public class Player : MonoBehaviour
         }
         else if(controller == 1)
         {
-            Debug.Log("Hey!");
+            Debug.Log("Hoy!");
             /*Vector3 _movement = new Vector3(Input.GetAxis("HorizontalS"), Input.GetAxis("VerticalS"), 0.0f);
             _animator.SetFloat("Horizontal", _movement.x);
             _animator.SetFloat("Vertical", _movement.y);
