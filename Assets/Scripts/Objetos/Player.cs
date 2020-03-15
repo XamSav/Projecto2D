@@ -27,7 +27,6 @@ public class Player : MonoBehaviour
 
         if (controller == 0)
         {
-            Debug.Log("Hey!");
             Vector3 _movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
             _animator.SetFloat("Horizontal", _movement.x);
             _animator.SetFloat("Vertical", _movement.y);
@@ -36,7 +35,6 @@ public class Player : MonoBehaviour
         }
         else if(controller == 1)
         {
-            Debug.Log("Hoy!");
             /*Vector3 _movement = new Vector3(Input.GetAxis("HorizontalS"), Input.GetAxis("VerticalS"), 0.0f);
             _animator.SetFloat("Horizontal", _movement.x);
             _animator.SetFloat("Vertical", _movement.y);
