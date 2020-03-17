@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy_B : MonoBehaviour
 {
-    private int _hits;
+    private int _hits = 0;
     [SerializeField]
     private Transform _player;
     private float _alfa;
@@ -14,62 +14,22 @@ public class Enemy_B : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
     }
-    private void Mirar()
+    private void OnCollisionEnter2D(Collision2D col)
     {
-        _alfa = Mathf.Atan2(_player.position.y - transform.position.y, _player.position.x - transform.position.x) * Mathf.Rad2Deg;
-        //transform.rotation = Quaternion.AngleAxis(_alfa, Vector3.forward);
+        Debug.Log("Vidas restantes del enemigo; " + _hits);
+
+        if (col.gameObject.tag == "Axe")
+        {
+            _hits++;
+            Debug.Log("Vidas restantes del enemigo; " + _hits);
+        }
     }
     void Update()
     {
-        Mirar();
-        //Right
-        if (_alfa <= 30 && _alfa >= -30)
-        {
-            _animator.SetFloat("Horizontal_B", 1);
-            _animator.SetFloat("Vertical_B", 0);
-        }
-        //Up-Right
-        if (_alfa >= 31 && _alfa <= 69)
-        {
-            _animator.SetFloat("Horizontal_B", 1);
-            _animator.SetFloat("Vertical_B", 1);
-        }
-        //Up
-        if (_alfa <=110 && _alfa >= 70)
-        {
-            _animator.SetFloat("Horizontal_B", 0);
-            _animator.SetFloat("Vertical_B", 1);
-        }
-        //Up-Left
-        if (_alfa >= 111 && _alfa <= 159)
-        {
-            _animator.SetFloat("Horizontal_B", -1);
-            _animator.SetFloat("Vertical_B", 1);
-        }
-        //Left
-        if (_alfa >=160 || _alfa <= -160)
-        {
-            _animator.SetFloat("Horizontal_B", -1);
-            _animator.SetFloat("Vertical_B", 0);
-        }
-        //Down
-        if(_alfa >= -110 && _alfa <= -70)
-        {
-            _animator.SetFloat("Horizontal_B", 0);
-            _animator.SetFloat("Vertical_B", -1);
-        }
-        //Down-Left
-        if (_alfa <= -111 && _alfa >= -159)
-        {
-            _animator.SetFloat("Horizontal_B", -1);
-            _animator.SetFloat("Vertical_B", -1);
-        }
-        //Down-Right
-        if (_alfa <= -31 && _alfa >= -69)
-        {
-            _animator.SetFloat("Horizontal_B", 1);
-            _animator.SetFloat("Vertical_B", -1);
-        }
+        //Mirar();
+        Vector3 _movement = new Vector3(_player.position.x - transform.position.x, _player.position.y - transform.position.y, 0);
+        _animator.SetFloat("Horizontal_B", _movement.x);
+        _animator.SetFloat("Vertical_B", _movement.y);
         if(_hits == 3)
         {
             Destroy(this.gameObject);
