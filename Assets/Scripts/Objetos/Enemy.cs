@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+
+    public int maxHealth = 8;
+    int currentHealth;
+
     private Move _move;
     [SerializeField]
     private bool _aggro;
@@ -25,6 +29,10 @@ public class Enemy : MonoBehaviour
         seconds = 0;
         wait = 3;
         //howclose = 8;
+
+        currentHealth = maxHealth;
+
+
     }
 
     void Update()
@@ -85,5 +93,24 @@ public class Enemy : MonoBehaviour
                 GetComponent<RigidBody>().AddForce(transform.forward * _move);
             }
         } */       
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Debug.Log("Enemy died!");
+        
+        //Die Animation
+
+        //Disable Enemy
     }
 }
