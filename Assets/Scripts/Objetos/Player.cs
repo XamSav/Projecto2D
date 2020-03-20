@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class Player : MonoBehaviour
 {
-    //private int hits = 7;
+    private int _hits = 7;
     private Move _move;
     private Animator _animator;
     [SerializeField]
@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     private int controller;
     private float secondsCounter = 0;
     private float secondsToCount = 1;
+    [SerializeField]
+    private Transform _axepoint;
     void Awake()
     {
         controller = PlayerPrefs.GetInt("Controller");
@@ -21,13 +23,23 @@ public class Player : MonoBehaviour
         _animator = GetComponent<Animator>();
         DontDestroyOnLoad(this.gameObject);
     }
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Enemy_B")
+        {            _hits--;
+            Debug.Log("Vidas restantes; " + _hits);
+        }
+    }
     void Update()
     {
+        if (_hits == 0)
+        {
+            Destroy(this.gameObject);
+        }
         controller = PlayerPrefs.GetInt("Controller");
 
         if (controller == 0)
         {
-            Debug.Log("Hey!");
             Vector3 _movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
             _animator.SetFloat("Horizontal", _movement.x);
             _animator.SetFloat("Vertical", _movement.y);
@@ -36,7 +48,6 @@ public class Player : MonoBehaviour
         }
         else if(controller == 1)
         {
-            Debug.Log("Hoy!");
             /*Vector3 _movement = new Vector3(Input.GetAxis("HorizontalS"), Input.GetAxis("VerticalS"), 0.0f);
             _animator.SetFloat("Horizontal", _movement.x);
             _animator.SetFloat("Vertical", _movement.y);
@@ -132,7 +143,7 @@ public class Player : MonoBehaviour
             if (secondsCounter >= secondsToCount)
             {
                 secondsCounter = 0;
-                GameObject hijo = Instantiate(_axe) as GameObject;
+                GameObject hijo = Instantiate(_axe, _axepoint) as GameObject;
                 hijo.transform.parent = this.transform;
                 hijo.transform.position = this.transform.position;
             }

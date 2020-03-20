@@ -11,6 +11,18 @@ TextureImporter:
   - first:
       213: 8660729888192663457
     second: Tiles_Pillar_2
+  - first:
+      213: -3725347519618875349
+    second: Tiles_Pillar_3
+  - first:
+      213: -3385752976191385611
+    second: Tiles_Pillar_0
+  - first:
+      213: 3742429117922022487
+    second: Tiles_Pillar_3
+  - first:
+      213: -8350156958859430721
+    second: Tiles_Pillar_4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -95,27 +107,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tiles_Pillar_0
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 416
-        width: 32
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dc35dbd2ab7c3e5b0800000000000000
-      internalID: -5340205130686049331
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Tiles_Pillar_1
       rect:
         serializedVersion: 2
@@ -124,7 +115,7 @@ TextureImporter:
         width: 29
         height: 89
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -145,7 +136,7 @@ TextureImporter:
         width: 32
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -153,6 +144,69 @@ TextureImporter:
       bones: []
       spriteID: 1af055162f7113870800000000000000
       internalID: 8660729888192663457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_Pillar_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 480
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff04ec4b936301d0800000000000000
+      internalID: -3385752976191385611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_Pillar_3
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75412da5477cfe330800000000000000
+      internalID: 3742429117922022487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles_Pillar_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb47d68ac784e1c80800000000000000
+      internalID: -8350156958859430721
       vertices: []
       indices: 
       edges: []

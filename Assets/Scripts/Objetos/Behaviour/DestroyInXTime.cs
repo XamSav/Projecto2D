@@ -16,7 +16,7 @@ public class DestroyInXTime : MonoBehaviour
     IEnumerator Destroy()
     {
         yield return new WaitForSeconds(time);
-        Debug.Log("Hey!");
+        Debug.Log("Objeto Destruido!");
         Destroy(objectDestroy);
     }
 }
