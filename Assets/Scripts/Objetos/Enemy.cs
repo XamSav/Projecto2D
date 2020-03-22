@@ -5,9 +5,11 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
-    public int maxHealth = 8;
-    int currentHealth;
+    //public int maxHealth = 8;
+    //int currentHealth;
 
+    private Transform _enemylocation;
+    private Transform _player;
     private Move _move;
     [SerializeField]
     private bool _aggro;
@@ -15,37 +17,30 @@ public class Enemy : MonoBehaviour
     /*private Transform player;
     private float distance;
     private float howclose;*/
-
+  
+    [SerializeField]
+    private int _hits = 0;
     float seconds;
     int randomdir;
     float wait;
 
     void Awake()
     {
-        //player = GameObject.FindGameObjectWithTag("Player");
         _move = GetComponent<Move>();
         _animator = GetComponent<Animator>();
         randomdir = Random.Range(0, 8);
         seconds = 0;
         wait = 3;
-        //howclose = 8;
 
-        currentHealth = maxHealth;
-
-
+        // currentHealth = maxHealth;
+        _enemylocation = this.transform;
+        _player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        /*distance = Vector3.Distance(player.position, transform.position);
-        if (distance <= howclose)
-        {
-            _aggro = true;
-        }*/
-
         if(_aggro == false)
         {
-            //seconds -= Time.deltaTime;
             seconds += Time.deltaTime;
 
             if (seconds >= wait)
@@ -77,40 +72,50 @@ public class Enemy : MonoBehaviour
                     case 7:
                         _move.move(new Vector2(1, -1));                      
                         break;
-
-
                 }
                 _animator.SetInteger("eState", 0);
                 seconds = 0;
                 randomdir = Random.Range(0, 8);
-            }           
-        }
-        /*else
-        {
-            if(distance <= howclose)
-            {
-                transform.LookAt(player);
-                GetComponent<RigidBody>().AddForce(transform.forward * _move);
             }
-        } */       
-    }
-
-    public void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
-
-        if (currentHealth <= 0)
+            if (Vector3.Distance(_enemylocation.position, _player.position) <= 5)
+            {
+                _aggro = true;
+            }
+        }
+        else
         {
-            Die();
+            Vector3 _facing = new Vector3(_player.position.x - transform.position.x, _player.position.y - transform.position.y, 0).normalized;
+            _move.move(_facing);
+        }
+        if (_hits == 4)
+        {
+            Destroy(this.gameObject);
         }
     }
+     private void OnCollisionEnter2D(Collision2D col)
+     {
+         if (col.gameObject.tag == "Axe")
+         {
+             _hits++;
+             Debug.Log("Vidas restantes del enemigo; " + _hits);
+         }
+     }
+    /*public void TakeDamage(int damage)
+{
+   currentHealth -= damage;
 
-    void Die()
-    {
-        Debug.Log("Enemy died!");
-        
-        //Die Animation
+   if (currentHealth <= 0)
+   {
+       Die();
+   }
+}
 
-        //Disable Enemy
-    }
+void Die()
+{
+   Debug.Log("Enemy died!");
+
+   //Die Animation
+
+   //Disable Enemy
+}*/
 }
