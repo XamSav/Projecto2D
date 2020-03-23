@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-
     //public int maxHealth = 8;
     //int currentHealth;
 
@@ -99,17 +98,19 @@ public class Enemy : MonoBehaviour
              _hits++;
              Debug.Log("Vidas restantes del enemigo; " + _hits);
          }
-     }
+    }
+    public void GetKnocked()
+    { }
+
+    
     /*public void TakeDamage(int damage)
 {
    currentHealth -= damage;
-
    if (currentHealth <= 0)
    {
        Die();
    }
 }
-
 void Die()
 {
    Debug.Log("Enemy died!");

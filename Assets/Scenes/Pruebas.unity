@@ -544,7 +544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dir: {x: 0, y: 0}
-  _velM: 0.35
+  _velM: 0.5
 --- !u!50 &1651127201
 Rigidbody2D:
   serializedVersion: 4

@@ -13,8 +13,9 @@ public class Chest : MonoBehaviour
     {
         if(chestOpens.GetBool("ChestKey") == true && openInteraction == true)
         {
-            GameObject alertOn = (GameObject)Instantiate(alert, transform.position, Quaternion.identity);
-            Destroy(alertOn, 1.5f);
+            /*GameObject alertOn = (GameObject)Instantiate(alert, transform.position, Quaternion.identity);
+            Destroy(alertOn, 1.5f);*/
+            Debug.Log("Item already claimed.");
         }
         else if (openInteraction == true)
         {
