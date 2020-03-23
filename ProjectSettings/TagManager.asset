@@ -4,9 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy_B
-  - Enemy_A
   - Axe
+  - Enemy
+  - Enemy_B
   layers:
   - Default
   - TransparentFX

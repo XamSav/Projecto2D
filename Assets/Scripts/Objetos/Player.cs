@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
     private int _hits = 7;
     private Move _move;
     private Animator _animator;
+    private Animator _animatoraxe;
     [SerializeField]
     private GameObject _axe;
     private int controller;
@@ -13,6 +14,8 @@ public class Player : MonoBehaviour
     private float secondsToCount = 1;
     [SerializeField]
     private Transform _axepoint;
+    [SerializeField]
+    Vector2 _movement;
     void Awake()
     {
         controller = PlayerPrefs.GetInt("Controller");
@@ -21,12 +24,14 @@ public class Player : MonoBehaviour
     private void Start()
     {
         _animator = GetComponent<Animator>();
+        _animatoraxe = GetComponent<Animator>();
         DontDestroyOnLoad(this.gameObject);
     }
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "Enemy_B")
-        {            _hits--;
+        if (col.gameObject.tag == "Enemy")
+        {
+            _hits--;
             Debug.Log("Vidas restantes; " + _hits);
         }
     }
@@ -40,7 +45,7 @@ public class Player : MonoBehaviour
 
         if (controller == 0)
         {
-            Vector3 _movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
+            _movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
             _animator.SetFloat("Horizontal", _movement.x);
             _animator.SetFloat("Vertical", _movement.y);
             _animator.SetFloat("Magnitude", _movement.magnitude);
@@ -56,7 +61,7 @@ public class Player : MonoBehaviour
             //Up-Left
             if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
             {
-                Vector2 _movement = new Vector2(-1, 1);
+                _movement = new Vector2(-1, 1);
                 _animator.SetFloat("Horizontal", _movement.x);
                 _animator.SetFloat("Vertical", _movement.y);
                 _animator.SetFloat("Magnitude", _movement.magnitude);
@@ -67,7 +72,7 @@ public class Player : MonoBehaviour
                 //Up-Right
                 if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
                 {
-                    Vector2 _movement = new Vector2(1, 1);
+                    _movement = new Vector2(1, 1);
                     _animator.SetFloat("Horizontal", _movement.x);
                     _animator.SetFloat("Vertical", _movement.y);
                     _animator.SetFloat("Magnitude", _movement.magnitude);
@@ -78,7 +83,7 @@ public class Player : MonoBehaviour
                     //Down-Left
                     if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
                     {
-                        Vector2 _movement = new Vector2(-1, -1);
+                        _movement = new Vector2(-1, -1);
                         _animator.SetFloat("Horizontal", _movement.x);
                         _animator.SetFloat("Vertical", _movement.y);
                         _animator.SetFloat("Magnitude", _movement.magnitude);
@@ -89,7 +94,7 @@ public class Player : MonoBehaviour
                         //Down-Right
                         if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
                         {
-                            Vector2 _movement = new Vector2(1, -1);
+                            _movement = new Vector2(1, -1);
                             _animator.SetFloat("Horizontal", _movement.x);
                             _animator.SetFloat("Vertical", _movement.y);
                             _animator.SetFloat("Magnitude", _movement.magnitude);
@@ -99,7 +104,7 @@ public class Player : MonoBehaviour
                         {
                             if (Input.GetKey(KeyCode.W))
                             {
-                                Vector2 _movement = new Vector2(0, 1);                                
+                                _movement = new Vector2(0, 1);                                
                                 _animator.SetFloat("Vertical", _movement.y);
                                 _animator.SetFloat("Horizontal", _movement.x);
                                 _animator.SetFloat("Magnitude", _movement.magnitude);
@@ -107,7 +112,7 @@ public class Player : MonoBehaviour
                             }
                             if (Input.GetKey(KeyCode.S))
                             {
-                                Vector2 _movement = new Vector2(0, -1);
+                                _movement = new Vector2(0, -1);
                                 _animator.SetFloat("Vertical", _movement.y);
                                 _animator.SetFloat("Horizontal", _movement.x);
                                 _animator.SetFloat("Magnitude", _movement.magnitude);
@@ -115,7 +120,7 @@ public class Player : MonoBehaviour
                             }
                             if (Input.GetKey(KeyCode.D))
                             {
-                                Vector2 _movement = new Vector2(1, 0);
+                                _movement = new Vector2(1, 0);
                                 _animator.SetFloat("Vertical", _movement.y);
                                 _animator.SetFloat("Horizontal", _movement.x);
                                 _animator.SetFloat("Magnitude", _movement.magnitude);
@@ -123,7 +128,7 @@ public class Player : MonoBehaviour
                             }
                             if (Input.GetKey(KeyCode.A))
                             {
-                                Vector2 _movement = new Vector2(-1, 0);
+                                _movement = new Vector2(-1, 0);
                                 _animator.SetFloat("Vertical", _movement.y);
                                 _animator.SetFloat("Horizontal", _movement.x);
                                 _animator.SetFloat("Magnitude", _movement.magnitude);
@@ -142,6 +147,9 @@ public class Player : MonoBehaviour
             if (secondsCounter >= secondsToCount)
             {
                 secondsCounter = 0;
+                _animatoraxe.SetFloat("Vertical", _movement.y);
+                _animatoraxe.SetFloat("Horizontal", _movement.x);
+
                 GameObject hijo = Instantiate(_axe, _axepoint) as GameObject;
                 hijo.transform.parent = this.transform;
                 hijo.transform.position = this.transform.position;
