@@ -182,7 +182,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -220,6 +220,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _axe: {fileID: 1613029957962592947, guid: 7fc62398d1424a344b67f56ef4eba351, type: 3}
+  _axepoint: {fileID: 0}
+  _movement: {x: 0, y: 0}
 --- !u!114 &5838673018605782582
 MonoBehaviour:
   m_ObjectHideFlags: 0
