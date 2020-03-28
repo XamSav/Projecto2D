@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3236818601198527554}
   - component: {fileID: 5593722050601746044}
   - component: {fileID: 562290524992388537}
-  - component: {fileID: 3475437817876502609}
   - component: {fileID: 1816361207366934220}
   - component: {fileID: -5373801099972080902}
+  - component: {fileID: 7594956925207545939}
   m_Layer: 0
   m_Name: Hacha_Roja
   m_TagString: Axe
@@ -112,25 +112,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16559562, y: 0.13179109}
   m_EdgeRadius: 0
---- !u!95 &3475437817876502609
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1613029957962592947}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 89470acb3c5da7c479b231def37a99fe, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1816361207366934220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f9ac4e59b9363746a4a417d3c82c9e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 0.5
+  time: 0.55
   objectDestroy: {fileID: 1613029957962592947}
 --- !u!114 &-5373801099972080902
 MonoBehaviour:
@@ -157,3 +138,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbad028016a9a804abf3d4011d7d1a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _movement: {x: 0, y: 0}
+--- !u!95 &7594956925207545939
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613029957962592947}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2cde8b8ab91d8ba4499cfcf7483df1e1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

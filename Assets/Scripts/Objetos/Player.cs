@@ -12,8 +12,22 @@ public class Player : MonoBehaviour
     private int controller;
     private float secondsCounter = 0;
     private float secondsToCount = 1;
-    /*[SerializeField]
-    private Transform _axepoint;*/
+    [SerializeField]
+    private Transform _axepoint_down;
+    [SerializeField]
+    private Transform _axepoint_down_rigth;
+    [SerializeField]
+    private Transform _axepoint_down_left;
+    [SerializeField]
+    private Transform _axepoint_up;
+    [SerializeField]
+    private Transform _axepoint_up_rigth;
+    [SerializeField]
+    private Transform _axepoint_up_left;
+    [SerializeField]
+    private Transform _axepoint_left;
+    [SerializeField]
+    private Transform _axepoint_rigth;
     [SerializeField]
     private Vector2 _movement;
     private float x;
@@ -26,7 +40,6 @@ public class Player : MonoBehaviour
     private void Start()
     {
         _animator = GetComponent<Animator>();
-        //_animatoraxe = GetComponent<Animator>();
         DontDestroyOnLoad(this.gameObject);
     }
     private void OnCollisionEnter2D(Collision2D col)
@@ -39,10 +52,6 @@ public class Player : MonoBehaviour
     }
     private void Movement()
     {
-        x = _movement.x;
-        y = _movement.y;
-        PlayerPrefs.SetFloat("DirHorizontal", x);
-        PlayerPrefs.SetFloat("DirVertical", y);
         _animator.SetFloat("Horizontal", _movement.x);
         _animator.SetFloat("Vertical", _movement.y);
         _animator.SetFloat("Magnitude", _movement.magnitude);
@@ -126,18 +135,78 @@ public class Player : MonoBehaviour
                         }
                     }
                 }
-                PlayerPrefs.SetFloat("DirVertical", _movement.y);
-                PlayerPrefs.SetFloat("DirHorizontal", _movement.x);
             }
         }
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (secondsCounter >= secondsToCount)
             {
                 secondsCounter = 0;
-                GameObject hijo = Instantiate(_axe/*, _axepoint*/) as GameObject;
-                hijo.transform.parent = this.transform;
-                hijo.transform.position = this.transform.position;
+                //Solo Altura
+                if (_movement.x == 0)
+                {//Arriba
+                    if (_movement.y == 1)
+                    {
+                        GameObject hijo = Instantiate(_axe, _axepoint_up.position, Quaternion.identity) as GameObject;
+                        hijo.GetComponent<Axe_Attack>()._movement.x = _animator.GetFloat("Horizontal");
+                        hijo.GetComponent<Axe_Attack>()._movement.y = _animator.GetFloat("Vertical");
+                    }//Abajo
+                    if (_movement.y == -1)
+                    {
+                        GameObject hijo = Instantiate(_axe, _axepoint_down.position, Quaternion.identity) as GameObject;
+                        hijo.GetComponent<Axe_Attack>()._movement.x = _animator.GetFloat("Horizontal");
+                        hijo.GetComponent<Axe_Attack>()._movement.y = _animator.GetFloat("Vertical");
+                    }
+                }
+                //Derecha
+                if (_movement.x == 1)
+                {//Arriba
+                    if (_movement.y == 1)
+                    {
+                        GameObject hijo = Instantiate(_axe, _axepoint_down_rigth.position, Quaternion.identity) as GameObject;
+                        hijo.GetComponent<Axe_Attack>()._movement.x = _animator.GetFloat("Horizontal");
+                        hijo.GetComponent<Axe_Attack>()._movement.y = _animator.GetFloat("Vertical");
+                    }//Abajo
+                    if (_movement.y == -1)
+                    {
+                        GameObject hijo = Instantiate(_axe, _axepoint_up_rigth.position, Quaternion.identity) as GameObject;
+                        hijo.GetComponent<Axe_Attack>()._movement.x = _animator.GetFloat("Horizontal");
+                        hijo.GetComponent<Axe_Attack>()._movement.y = _animator.GetFloat("Vertical");
+                    }
+                    if (_movement.y == 0)
+                    {
+                        GameObject hijo = Instantiate(_axe, _axepoint_rigth.position, Quaternion.identity) as GameObject;
+                        hijo.GetComponent<Axe_Attack>()._movement.x = _animator.GetFloat("Horizontal");
+                        hijo.GetComponent<Axe_Attack>()._movement.y = _animator.GetFloat("Vertical");
+                    }
+                }
+                //Izquierda
+                if (_movement.x == -1)
+                {//Arriba
+                    if (_movement.y == 1)
+                    {
+                        GameObject hijo = Instantiate(_axe, _axepoint_up_left.position, Quaternion.identity) as GameObject;
+                        hijo.GetComponent<Axe_Attack>()._movement.x = _animator.GetFloat("Horizontal");
+                        hijo.GetComponent<Axe_Attack>()._movement.y = _animator.GetFloat("Vertical");
+                    }//Abajo
+                    if (_movement.y == -1)
+                    {
+                        GameObject hijo = Instantiate(_axe, _axepoint_down_left.position, Quaternion.identity) as GameObject;
+                        hijo.GetComponent<Axe_Attack>()._movement.x = _animator.GetFloat("Horizontal");
+                        hijo.GetComponent<Axe_Attack>()._movement.y = _animator.GetFloat("Vertical");
+                    }
+                    if (_movement.y == 0)
+                    {
+                        GameObject hijo = Instantiate(_axe, _axepoint_left.position, Quaternion.identity) as GameObject;
+                        hijo.GetComponent<Axe_Attack>()._movement.x = _animator.GetFloat("Horizontal");
+                        hijo.GetComponent<Axe_Attack>()._movement.y = _animator.GetFloat("Vertical");
+                    }
+                }
+                //hijo.GetComponent<Axe_Attack>()._movement.x = _animator.GetFloat("Horizontal");
+                //hijo.GetComponent<Axe_Attack>()._movement.y = _animator.GetFloat("Vertical");
+
+                /*hijo.transform.parent = this.transform;
+                hijo.transform.position = this.transform.position;*/
             }
         }
         secondsCounter += Time.deltaTime;
