@@ -163,13 +163,13 @@ public class Player : MonoBehaviour
                 {//Arriba
                     if (_movement.y == 1)
                     {
-                        GameObject hijo = Instantiate(_axe, _axepoint_down_rigth.position, Quaternion.identity) as GameObject;
+                        GameObject hijo = Instantiate(_axe, _axepoint_up_rigth.position, Quaternion.identity) as GameObject;
                         hijo.GetComponent<Axe_Attack>()._movement.x = _animator.GetFloat("Horizontal");
                         hijo.GetComponent<Axe_Attack>()._movement.y = _animator.GetFloat("Vertical");
                     }//Abajo
                     if (_movement.y == -1)
                     {
-                        GameObject hijo = Instantiate(_axe, _axepoint_up_rigth.position, Quaternion.identity) as GameObject;
+                        GameObject hijo = Instantiate(_axe, _axepoint_down_rigth.position, Quaternion.identity) as GameObject;
                         hijo.GetComponent<Axe_Attack>()._movement.x = _animator.GetFloat("Horizontal");
                         hijo.GetComponent<Axe_Attack>()._movement.y = _animator.GetFloat("Vertical");
                     }

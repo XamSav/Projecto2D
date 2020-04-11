@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 public class Spawns : MonoBehaviour
 {
     [SerializeField]
@@ -16,10 +16,15 @@ public class Spawns : MonoBehaviour
     private int _MaxRounds = 2;
     [SerializeField]
     private int _EnemysXRound = 2;
-    private int _NumberRounds = 0;
-    private void Start()
+    private void Entro(int nivel)
     {
         StartCoroutine(Spawning());
+    }
+    private int _NumberRounds = 0;
+    private void OnEnable()
+    {
+        Radio.Entrar += Entro;
+            
     }
     IEnumerator TimeSpawn()
     {
