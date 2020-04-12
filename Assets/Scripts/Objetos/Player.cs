@@ -38,8 +38,6 @@ public class Player : MonoBehaviour
     }
     private void Start()
     {
-        GameObject hijo = Instantiate(_axe, _axepoint_up.position, Quaternion.identity) as GameObject;
-        hijo.transform.parent = this.transform;
         _animator = GetComponent<Animator>();
         DontDestroyOnLoad(this.gameObject);
     }
@@ -64,7 +62,6 @@ public class Player : MonoBehaviour
             Destroy(this.gameObject);
         }
         controller = PlayerPrefs.GetInt("Controller");
-        Debug.Log(PlayerPrefs.GetInt("Controller"));
         if (controller == 0)
         {
             _movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
