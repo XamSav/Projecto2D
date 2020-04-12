@@ -21,6 +21,7 @@ public class Spawns : MonoBehaviour
         StartCoroutine(Spawning());
     }
     private int _NumberRounds = 0;
+    private bool empezo = false;
     private void OnEnable()
     {
         Radio.Entrar += Entro;
@@ -29,9 +30,10 @@ public class Spawns : MonoBehaviour
     IEnumerator TimeSpawn()
     {
         yield return new WaitForSeconds(10);
-        if (_NumberRounds <= _MaxRounds)
+        if (_NumberRounds <= _MaxRounds && empezo == false)
         {
             StartCoroutine(Spawning());
+            empezo = true;
         }
     }
     IEnumerator Spawning()

@@ -95,6 +95,7 @@ public class Enemy : MonoBehaviour
     }
      private void OnCollisionEnter2D(Collision2D col)
      {
+        Debug.Log("Pegue al enemigo");
          if (col.gameObject.tag == "Axe")
          {
              _hits++;

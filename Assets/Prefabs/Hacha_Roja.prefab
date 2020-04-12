@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1816361207366934220}
   - component: {fileID: -5373801099972080902}
   - component: {fileID: 7594956925207545939}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Hacha_Roja
   m_TagString: Axe
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f9ac4e59b9363746a4a417d3c82c9e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 0.55
+  time: 10
   objectDestroy: {fileID: 1613029957962592947}
 --- !u!114 &-5373801099972080902
 MonoBehaviour:

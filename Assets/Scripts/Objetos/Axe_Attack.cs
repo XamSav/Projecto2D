@@ -14,7 +14,6 @@ public class Axe_Attack : MonoBehaviour
     void FixedUpdate()
     {
         _animatoraxe.SetFloat("Vertical", _movement.y);
-        Debug.Log(_movement.y);
         _animatoraxe.SetFloat("Horizontal", _movement.x);
     }
 }

@@ -30,8 +30,6 @@ public class Player : MonoBehaviour
     private Transform _axepoint_rigth;
     [SerializeField]
     private Vector2 _movement;
-    private float x;
-    private float y;
     void Awake()
     {
         //chestBool = GetComponent<ChestVillage>();
@@ -40,6 +38,8 @@ public class Player : MonoBehaviour
     }
     private void Start()
     {
+        GameObject hijo = Instantiate(_axe, _axepoint_up.position, Quaternion.identity) as GameObject;
+        hijo.transform.parent = this.transform;
         _animator = GetComponent<Animator>();
         DontDestroyOnLoad(this.gameObject);
     }
@@ -64,7 +64,7 @@ public class Player : MonoBehaviour
             Destroy(this.gameObject);
         }
         controller = PlayerPrefs.GetInt("Controller");
-
+        Debug.Log(PlayerPrefs.GetInt("Controller"));
         if (controller == 0)
         {
             _movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
@@ -138,7 +138,7 @@ public class Player : MonoBehaviour
                 }
             }
         }
-        if (Input.GetKeyDown(KeyCode.Space) && ChestVillage.GetSword)
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetButton("Fire1"))/*&& ChestVillage.GetSword*/)
         {
             if (secondsCounter >= secondsToCount)
             {
@@ -151,12 +151,14 @@ public class Player : MonoBehaviour
                         GameObject hijo = Instantiate(_axe, _axepoint_up.position, Quaternion.identity) as GameObject;
                         hijo.GetComponent<Axe_Attack>()._movement.x = _animator.GetFloat("Horizontal");
                         hijo.GetComponent<Axe_Attack>()._movement.y = _animator.GetFloat("Vertical");
+                        hijo.transform.parent = this.transform;
                     }//Abajo
                     if (_movement.y == -1)
                     {
                         GameObject hijo = Instantiate(_axe, _axepoint_down.position, Quaternion.identity) as GameObject;
                         hijo.GetComponent<Axe_Attack>()._movement.x = _animator.GetFloat("Horizontal");
                         hijo.GetComponent<Axe_Attack>()._movement.y = _animator.GetFloat("Vertical");
+                        hijo.transform.parent = this.transform;
                     }
                 }
                 //Derecha
@@ -167,18 +169,21 @@ public class Player : MonoBehaviour
                         GameObject hijo = Instantiate(_axe, _axepoint_up_rigth.position, Quaternion.identity) as GameObject;
                         hijo.GetComponent<Axe_Attack>()._movement.x = _animator.GetFloat("Horizontal");
                         hijo.GetComponent<Axe_Attack>()._movement.y = _animator.GetFloat("Vertical");
+                        hijo.transform.parent = this.transform;
                     }//Abajo
                     if (_movement.y == -1)
                     {
                         GameObject hijo = Instantiate(_axe, _axepoint_down_rigth.position, Quaternion.identity) as GameObject;
                         hijo.GetComponent<Axe_Attack>()._movement.x = _animator.GetFloat("Horizontal");
                         hijo.GetComponent<Axe_Attack>()._movement.y = _animator.GetFloat("Vertical");
+                        hijo.transform.parent = this.transform;
                     }
                     if (_movement.y == 0)
                     {
                         GameObject hijo = Instantiate(_axe, _axepoint_rigth.position, Quaternion.identity) as GameObject;
                         hijo.GetComponent<Axe_Attack>()._movement.x = _animator.GetFloat("Horizontal");
                         hijo.GetComponent<Axe_Attack>()._movement.y = _animator.GetFloat("Vertical");
+                        hijo.transform.parent = this.transform;
                     }
                 }
                 //Izquierda
@@ -189,18 +194,21 @@ public class Player : MonoBehaviour
                         GameObject hijo = Instantiate(_axe, _axepoint_up_left.position, Quaternion.identity) as GameObject;
                         hijo.GetComponent<Axe_Attack>()._movement.x = _animator.GetFloat("Horizontal");
                         hijo.GetComponent<Axe_Attack>()._movement.y = _animator.GetFloat("Vertical");
+                        hijo.transform.parent = this.transform;
                     }//Abajo
                     if (_movement.y == -1)
                     {
                         GameObject hijo = Instantiate(_axe, _axepoint_down_left.position, Quaternion.identity) as GameObject;
                         hijo.GetComponent<Axe_Attack>()._movement.x = _animator.GetFloat("Horizontal");
                         hijo.GetComponent<Axe_Attack>()._movement.y = _animator.GetFloat("Vertical");
+                        hijo.transform.parent = this.transform;
                     }
                     if (_movement.y == 0)
                     {
                         GameObject hijo = Instantiate(_axe, _axepoint_left.position, Quaternion.identity) as GameObject;
                         hijo.GetComponent<Axe_Attack>()._movement.x = _animator.GetFloat("Horizontal");
                         hijo.GetComponent<Axe_Attack>()._movement.y = _animator.GetFloat("Vertical");
+                        hijo.transform.parent = this.transform;
                     }
                 }
                 //hijo.GetComponent<Axe_Attack>()._movement.x = _animator.GetFloat("Horizontal");
