@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
     private Vector2 _movement;
     private Transform _positionaxe;
     GameObject hijo = null;
-
+    public GameObject openGameOver;
     void Awake()
     {
         //chestBool = GetComponent<ChestVillage>();
@@ -67,6 +67,7 @@ public class Player : MonoBehaviour
         if (_hits == 0)
         {
             Destroy(this.gameObject);
+            openGameOver.SetActive(true);
         }
         controller = PlayerPrefs.GetInt("Controller");
         if (controller == 0)
@@ -224,7 +225,7 @@ public class Player : MonoBehaviour
                     }
                 }
             }
-            
+
         }
         secondsCounter += Time.deltaTime;
 

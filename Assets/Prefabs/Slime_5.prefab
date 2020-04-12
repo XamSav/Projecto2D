@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dir: {x: 0, y: 0}
-  _velM: 0.5
+  _velM: 0.65
 --- !u!114 &7079160901046236270
 MonoBehaviour:
   m_ObjectHideFlags: 0

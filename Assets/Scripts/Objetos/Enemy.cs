@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
         _animator = GetComponent<Animator>();
         randomdir = Random.Range(0, 8);
         seconds = 0;
-        wait = 3;
+        wait = 2;
 
         _enemylocation = this.transform;
         _player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -71,7 +71,7 @@ public class Enemy : MonoBehaviour
                 seconds = 0;
                 randomdir = Random.Range(0, 8);
             }
-            if (Vector3.Distance(_enemylocation.position, _player.position) <= 5)
+            if (Vector3.Distance(_enemylocation.position, _player.position) <= 7)
             {
                 _aggro = true;
             }
