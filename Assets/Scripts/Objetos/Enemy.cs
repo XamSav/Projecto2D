@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    //public int maxHealth = 8;
-    //int currentHealth;
-
     private Transform _enemylocation;
     private Transform _player;
     private Move _move;
@@ -15,9 +12,6 @@ public class Enemy : MonoBehaviour
     private Animator _animator;
     public Rigidbody2D enemyRigidBody;
     public Vector3 moveDirection;
-    /*private Transform player;
-    private float distance;
-    private float howclose;*/
 
     [SerializeField]
     private int _hits = 0;
@@ -33,7 +27,6 @@ public class Enemy : MonoBehaviour
         seconds = 0;
         wait = 3;
 
-        // currentHealth = maxHealth;
         _enemylocation = this.transform;
         _player = GameObject.FindGameObjectWithTag("Player").transform;
     }
@@ -93,23 +86,19 @@ public class Enemy : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-     private void OnCollisionEnter2D(Collision2D col)
-     {
-         if (col.gameObject.tag == "Axe")
-         {
-             _hits++;
-             Debug.Log("Vidas restantes del enemigo; " + _hits);
-         }
-        if (col.gameObject.tag == "Shield")
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Axe")
+        {
+            _hits++;
+            Debug.Log("Vidas restantes del enemigo; " + _hits);
+        }
+        /*if (col.gameObject.tag == "Shield")
         {
             moveDirection = enemyRigidBody.transform.position - col.transform.position;
             enemyRigidBody.AddForce(moveDirection * -500.0f);
-        }
-    }
-    public void GetKnocked()
-    { }
-
-    
+        }*/
+    }  
     /*public void TakeDamage(int damage)
 {
    currentHealth -= damage;
