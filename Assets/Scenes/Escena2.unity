@@ -31542,7 +31542,7 @@ MonoBehaviour:
     type: 3}
   _select: 1
   _MaxRounds: 2
-  _EnemysXRound: 2
+  _EnemysXRound: 1
 --- !u!1 &1992236481
 GameObject:
   m_ObjectHideFlags: 0

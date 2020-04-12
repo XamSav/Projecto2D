@@ -9,7 +9,11 @@ public class Button : MonoBehaviour
     public Animator button_anim;
     public event Action OnClick = delegate { };
     private bool button_press;
-
+    private int controller;
+    private void Awake()
+    {
+        controller = PlayerPrefs.GetInt("Controller");
+    }
     private void OnTriggerStay2D(Collider2D collision)
     {
         OnClick.Invoke();
@@ -27,6 +31,15 @@ public class Button : MonoBehaviour
     }
     void FixedUpdate()
     {
-        button_press = Input.GetKeyDown(KeyCode.E);
+        
+        controller = PlayerPrefs.GetInt("Controller");
+        if (controller == 1)
+        {
+             button_press = Input.GetKeyDown(KeyCode.E);
+        }
+        else if (controller == 0)
+        {
+             button_press = Input.GetButton("Use");
+        }
     } 
 }

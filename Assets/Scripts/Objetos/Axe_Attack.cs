@@ -6,9 +6,11 @@ public class Axe_Attack : MonoBehaviour
 {
 
     private Animator _animatoraxe;
+    private GameObject player;
     public Vector2 _movement;
     private void Awake()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         _animatoraxe = GetComponent<Animator>();
     }
     void FixedUpdate()

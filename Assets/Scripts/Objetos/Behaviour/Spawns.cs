@@ -25,7 +25,6 @@ public class Spawns : MonoBehaviour
     private void OnEnable()
     {
         Radio.Entrar += Entro;
-            
     }
     IEnumerator TimeSpawn()
     {

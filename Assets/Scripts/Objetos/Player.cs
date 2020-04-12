@@ -157,6 +157,13 @@ public class Player : MonoBehaviour
                         hijo.GetComponent<Axe_Attack>()._movement.y = _animator.GetFloat("Vertical");
                         hijo.transform.parent = this.transform;
                     }
+                    if (_movement.y == 0)
+                    {
+                        GameObject hijo = Instantiate(_axe, _axepoint_down.position, Quaternion.identity) as GameObject;
+                        hijo.GetComponent<Axe_Attack>()._movement.x = 0;
+                        hijo.GetComponent<Axe_Attack>()._movement.y = -1;
+                        hijo.transform.parent = this.transform;
+                    }
                 }
                 //Derecha
                 if (_movement.x == 1)

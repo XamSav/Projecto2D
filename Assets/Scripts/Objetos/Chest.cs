@@ -10,7 +10,11 @@ public class Chest : MonoBehaviour
     public GameObject itemloot;
     //public GameObject alert;
     public GameObject Lever;
-
+    private int controller;
+    private void Awake()
+    {
+        controller = PlayerPrefs.GetInt("Controller");
+    }
     private void OnTriggerStay2D(Collider2D collision)
     {
         if(chestOpens.GetBool("ChestKey") == true && openInteraction == true)
@@ -29,6 +33,14 @@ public class Chest : MonoBehaviour
     }
     private void FixedUpdate()
     {
-            openInteraction = Input.GetKeyDown(KeyCode.E);        
+        controller = PlayerPrefs.GetInt("Controller");
+        if (controller == 1)
+        {
+            openInteraction = Input.GetKeyDown(KeyCode.E);
+        }
+        else if (controller == 0)
+        {
+            openInteraction = Input.GetButton("Use");
+        }
     }
 }

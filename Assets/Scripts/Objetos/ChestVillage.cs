@@ -8,10 +8,12 @@ public class ChestVillage : MonoBehaviour
     private bool openInteraction;
     public GameObject itemloot;
     public static bool GetSword;
+    private int controller;
     //public GameObject alert;
 
     private void Awake()
     {
+        controller = PlayerPrefs.GetInt("Controller");
         GetSword = false;
     }
     private void OnTriggerStay2D(Collider2D collision)
@@ -32,6 +34,14 @@ public class ChestVillage : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        openInteraction = Input.GetKeyDown(KeyCode.E);
+        controller = PlayerPrefs.GetInt("Controller");
+        if (controller == 1)
+        {
+            openInteraction = Input.GetKeyDown(KeyCode.E);
+        }
+        else if (controller == 0)
+        {
+            openInteraction = Input.GetButton("Use");
+        }
     }
 }
