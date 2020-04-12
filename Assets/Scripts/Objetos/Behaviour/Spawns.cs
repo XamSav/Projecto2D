@@ -16,29 +16,32 @@ public class Spawns : MonoBehaviour
     private int _MaxRounds = 2;
     [SerializeField]
     private int _EnemysXRound = 2;
-    private void Entro(int nivel)
-    {
-        StartCoroutine(Spawning());
-    }
-    private int _NumberRounds = 0;
     private bool empezo = false;
     private void OnEnable()
     {
         Radio.Entrar += Entro;
     }
-    IEnumerator TimeSpawn()
+    private void Entro(int nivel)
     {
-        yield return new WaitForSeconds(10);
-        if (_NumberRounds <= _MaxRounds && empezo == false)
+        if (empezo == false)
         {
             StartCoroutine(Spawning());
             empezo = true;
         }
     }
+    private int _NumberRounds = 0;
+
+    IEnumerator TimeSpawn()
+    {
+        yield return new WaitForSeconds(10);
+        if (_NumberRounds <= _MaxRounds)
+        {
+            StartCoroutine(Spawning());
+        }
+    }
     IEnumerator Spawning()
     {
         for (int a = 0; a < _EnemysXRound; a++) {
-            Debug.Log("Corrutina Ok");
             switch (_select)
             {
                 case true:

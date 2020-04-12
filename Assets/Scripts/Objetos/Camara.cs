@@ -17,7 +17,6 @@ public class Camara : MonoBehaviour
     private void OnEnable()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        Debug.Log("camara enable");
     }
 
     private void FixedUpdate()

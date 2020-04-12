@@ -135,7 +135,7 @@ public class Player : MonoBehaviour
                 }
             }
         }
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetButton("Fire1"))/*&& ChestVillage.GetSword*/)
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetButton("Fire1")) && ChestVillage.GetSword)
         {
             if (secondsCounter >= secondsToCount)
             {
@@ -215,11 +215,6 @@ public class Player : MonoBehaviour
                         hijo.transform.parent = this.transform;
                     }
                 }
-                //hijo.GetComponent<Axe_Attack>()._movement.x = _animator.GetFloat("Horizontal");
-                //hijo.GetComponent<Axe_Attack>()._movement.y = _animator.GetFloat("Vertical");
-
-                /*hijo.transform.parent = this.transform;
-                hijo.transform.position = this.transform.position;*/
             }
         }
         secondsCounter += Time.deltaTime;
