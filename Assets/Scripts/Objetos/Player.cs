@@ -137,7 +137,7 @@ public class Player : MonoBehaviour
                 }
             }
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && ChestVillage.GetSword)
         {
             if (secondsCounter >= secondsToCount)
             {
