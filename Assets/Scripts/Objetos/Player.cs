@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class Player : MonoBehaviour
 {
-    private int _hits = 7;
+    public int _hits = 7;
     private Move _move;
     private Animator _animator;
     //private Animator _animatoraxe;
@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
     private Transform _axepoint_rigth;
     [SerializeField]
     private Vector2 _movement;
+    public GameObject openGameOver;
     void Awake()
     {
         //chestBool = GetComponent<ChestVillage>();
@@ -59,7 +60,8 @@ public class Player : MonoBehaviour
     {
         if (_hits == 0)
         {
-            Destroy(this.gameObject);
+            Destroy(this.gameObject);            
+            openGameOver.SetActive(true);
         }
         controller = PlayerPrefs.GetInt("Controller");
         if (controller == 0)
