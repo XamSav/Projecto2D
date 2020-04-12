@@ -13,10 +13,12 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private bool _aggro;
     private Animator _animator;
+    public Rigidbody2D enemyRigidBody;
+    public Vector3 moveDirection;
     /*private Transform player;
     private float distance;
     private float howclose;*/
-  
+
     [SerializeField]
     private int _hits = 0;
     float seconds;
@@ -98,6 +100,11 @@ public class Enemy : MonoBehaviour
              _hits++;
              Debug.Log("Vidas restantes del enemigo; " + _hits);
          }
+        if (col.gameObject.tag == "Shield")
+        {
+            moveDirection = enemyRigidBody.transform.position - col.transform.position;
+            enemyRigidBody.AddForce(moveDirection * -500.0f);
+        }
     }
     public void GetKnocked()
     { }

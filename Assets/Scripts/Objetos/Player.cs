@@ -34,6 +34,7 @@ public class Player : MonoBehaviour
     private float y;
     void Awake()
     {
+        //chestBool = GetComponent<ChestVillage>();
         controller = PlayerPrefs.GetInt("Controller");
         _move = GetComponent<Move>();
     }
