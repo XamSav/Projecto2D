@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class Player : MonoBehaviour
 {
-    private int _hits = 7;
+    public int _hits = 7;
     private Move _move;
     private Animator _animator;
     [SerializeField]
@@ -142,7 +142,7 @@ public class Player : MonoBehaviour
                 }
             }
         }
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetButton("Fire1")) && ChestVillage.GetSword)
+        if ((Input.GetKeyDown(KeyCode.K) || Input.GetButton("Fire1")) && ChestVillage.GetSword)
         {
             if (secondsCounter >= secondsToCount)
             {
