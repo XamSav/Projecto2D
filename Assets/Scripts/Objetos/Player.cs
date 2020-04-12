@@ -13,8 +13,10 @@ public class Player : MonoBehaviour
     private float secondsToCount = 1;
     [SerializeField]
     private Transform _axepoint;
+    //private ChestVillage chestBool;
     void Awake()
     {
+        //chestBool = GetComponent<ChestVillage>();
         controller = PlayerPrefs.GetInt("Controller");
         _move = GetComponent<Move>();
     }
@@ -137,7 +139,7 @@ public class Player : MonoBehaviour
                 }
             }
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if ((Input.GetKeyDown(KeyCode.Space)) && (ChestVillage.GetSword == true))
         {
             if (secondsCounter >= secondsToCount)
             {
